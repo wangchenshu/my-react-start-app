@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
+import Clock from './Clock';
+import MyButton from './MyButton';
+import Toggle from './Toggle';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  //<React.StrictMode>
+  //  <App />
+  //</React.StrictMode>,
+  <div>
+    <Clock /><br />
+    <MyButton /><br />
+    <Toggle />
+  </div>,
   document.getElementById('root')
 );
 
