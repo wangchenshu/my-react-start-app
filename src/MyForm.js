@@ -1,5 +1,9 @@
 import React from 'react';
 
+const ALREADY_STR = '已';
+const SUBMIT_STR = '送出';
+const CLEAR_STR = '清除';
+
 class MyForm extends React.Component {
 
     constructor(props) {
@@ -10,11 +14,8 @@ class MyForm extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClear = this.handleClear.bind(this);
         this.clearValue = this.clearValue.bind(this);
-    }
-
-    clearValue() {
-        this.setState({value: ''})
     }
 
     handleChange(event) {
@@ -24,9 +25,17 @@ class MyForm extends React.Component {
     }
 
     handleSubmit(event) {
-        alert(this.state.value);
+        alert(ALREADY_STR + SUBMIT_STR);
         this.clearValue();
         event.preventDefault();
+    }
+
+    handleClear() {
+        this.clearValue();
+    }
+
+    clearValue() {
+        this.setState({value: ''})
     }
 
     render() {
@@ -34,7 +43,8 @@ class MyForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
                 <label> 請輸入: </label>
                 <textarea value={this.state.value} onChange={this.handleChange} />
-                <input type="submit" value="送出" />
+                <input type="submit" value={SUBMIT_STR} />
+                <input type="button" onClick={this.handleClear} value={CLEAR_STR} />
                 <div>目前輸入: {this.state.value}</div>
             </form>
         );

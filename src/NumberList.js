@@ -7,11 +7,7 @@ class NumberList extends React.Component {
             <ListItem key={key} value={item} />
         );
 
-        return (
-            <ul>
-                {listItems}
-            </ul>
-        );
+        return <ul>{listItems}</ul>;
     }
 }
 
