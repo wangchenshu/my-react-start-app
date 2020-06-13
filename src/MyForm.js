@@ -43,8 +43,8 @@ class MyForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
                 <label> 請輸入: </label>
                 <textarea value={this.state.value} onChange={this.handleChange} />
-                <input type="submit" value={SUBMIT_STR} />
-                <input type="button" onClick={this.handleClear} value={CLEAR_STR} />
+                <input type='submit' value={SUBMIT_STR} />
+                <input type='button' onClick={this.handleClear} value={CLEAR_STR} />
                 <div>目前輸入: {this.state.value}</div>
             </form>
         );
