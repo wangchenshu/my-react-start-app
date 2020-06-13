@@ -27,7 +27,7 @@ class MySelect extends React.Component {
         this.setState({
             value: targetValue,
             showValue: targetText
-        })
+        });
     }
 
     render() {
