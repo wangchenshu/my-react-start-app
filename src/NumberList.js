@@ -1,21 +1,16 @@
 import React from 'react';
-
-const NUMBER = [1, 2, 3, 4, 5];
-const LIST_ITEMS = NUMBER.map((item, key) =>
-    <li key={key}>{item}</li>
-);
+import ListItem from './ListItem';
 
 class NumberList extends React.Component {
-
-    constructor(props) {
-        console.log(props);
-        super(props);
-        this.state = {}
-    }
-
     render() {
+        const listItems = this.props.numbers.map((item, key) =>
+            <ListItem key={key} value={item} />
+        );
+
         return (
-            <ul>{LIST_ITEMS}</ul>
+            <ul>
+                {listItems}
+            </ul>
         );
     }
 }

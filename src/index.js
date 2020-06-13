@@ -6,19 +6,23 @@ import Clock from './Clock';
 import MyButton from './MyButton';
 import Toggle from './Toggle';
 import NumberList from './NumberList';
+import MyForm from './MyForm';
+import MyTitle from './MyTitle';
 import * as serviceWorker from './serviceWorker';
 
-const N = [1];
+const NUMBERS = [1, 2, 3, 4, 5];
 
 ReactDOM.render(
   //<React.StrictMode>
   //  <App />
   //</React.StrictMode>,
   <div>
-    <Clock /><br />
-    <MyButton /><br />
+    <MyTitle />
+    <Clock />
+    <MyButton />
     <Toggle />
-    <NumberList numbers={N} />
+    <NumberList numbers={NUMBERS} />
+    <MyForm />
   </div>,
   document.getElementById('root')
 );
