@@ -17,15 +17,14 @@ class MySelect extends React.Component {
 
     handleChange(event) {
         var index = event.nativeEvent.target.selectedIndex;
-        var targetValue = event.target.value;
         var targetText = YOU_SELECT + event.target[index].text;
         
-        if (targetValue == '') {
+        if (event.target.value == '') {
             targetText = NOTHING_SELECT;
         }
 
         this.setState({
-            value: targetValue,
+            value: event.target.value,
             showValue: targetText
         });
     }
